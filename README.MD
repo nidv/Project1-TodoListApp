@@ -9,6 +9,7 @@ The application supports loading, editing and persisting a task list so that a u
 
 
 2. Functional Features
+
 2.1 Task Model
 
 The application models a task with the following attributes:
