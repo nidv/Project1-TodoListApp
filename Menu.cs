@@ -161,11 +161,11 @@ namespace Project1_TodoListApp
         {
             Console.WriteLine("--- Add a new task ---");
             string title = PromptString("Title");
-            if (string.IsNullOrWhiteSpace(title)) { Console.WriteLine("  Title cannot be empty.\n"); return; }
+            if (string.IsNullOrWhiteSpace(title)) { Console.WriteLine("  Title cannot be empty.\n"); PauseConsole(); return; }
 
             DateTime dueDate = PromptDate("Due date");
             string project = PromptString("Project");
-            if (string.IsNullOrWhiteSpace(project)) { Console.WriteLine("  Project cannot be empty.\n"); return; }
+            if (string.IsNullOrWhiteSpace(project)) { Console.WriteLine("  Project cannot be empty.\n"); PauseConsole(); return; }
 
             taskFunctions.AddTask(title, dueDate, project);
             Console.WriteLine("  Task added.\n");
