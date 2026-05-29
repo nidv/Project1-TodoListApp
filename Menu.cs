@@ -77,14 +77,14 @@ namespace Project1_TodoListApp
                 return;
             }
 
-            Console.WriteLine($"  {"#",-4} {"Status",-6} {"Due Date",-12} {"Project",-20} Title");
+            Console.WriteLine($"  {"#",-4} {"Status",-6} {"Due Date",-12} {"Project",-15} Title");
 
             for (int i = 0; i < tasks.Count; i++)
             {
                 string status = tasks[i].Status ? "[DONE]" : "[    ]";
                 if (tasks[i].Status) Console.ForegroundColor = ConsoleColor.Green;                
                 else Console.ResetColor();                
-                Console.WriteLine($"  {i + 1,-4} {status,-6} {tasks[i].DueDate:yyyy-MM-dd}   {tasks[i].Project,-20} {tasks[i].Title}");
+                Console.WriteLine($"  {i + 1,-4} {status,-6} {tasks[i].DueDate:yyyy-MM-dd}   {tasks[i].Project,-15} {tasks[i].Title}");
             }
             Console.ResetColor();
             Console.WriteLine();
